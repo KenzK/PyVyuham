@@ -15,11 +15,11 @@ class Marshal:
         self.result
 
         """
-        self.result = {'Pass':True, 'Fail':False, 'Abort':''} 
+        self.result = {'Pass':True, 'Fail':False, 'Abort':''}
         self.repo = {}
         self.testtype = []
         self.loadplugin = []
-
+        self.
 #    def m_argparser(self, *m_args, **m_kwargs):
     def m_argparser(self):
         """
@@ -45,7 +45,7 @@ class Marshal:
                               help="Set quiet exec mode")
         m_parser.parse_args()
 
-        return m_parser 
+        return m_parser
 
     def main(self, *args):
         print "Test Marshal"
