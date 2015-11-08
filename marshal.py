@@ -19,7 +19,7 @@ class Marshal:
         self.repo = {}
         self.testtype = []
         self.loadplugin = []
-        self.
+
 #    def m_argparser(self, *m_args, **m_kwargs):
     def m_argparser(self):
         """
