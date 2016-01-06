@@ -1,12 +1,19 @@
 #Main object class for the Framework
-import vylogger
+import vyLog
 
-import vyUtils.vymarshal as vymarshal
-import vyUtils.vyscout as vyscout
+import vyUtils.vyMarshal as vymarshal
+import vyUtils.vyScout as vyscout
 
 class vyMain:
     def __init__(self):
         """Build PyVyuham
         """
-        self.scout=vyscout()
-        self.marshal=vymarshal()
+        print vyLog
+        print vymarshal
+        print vyscout
+        ##self.marshal=vymarshal()
+        
+    def launch_execution(self):
+        '''Launch Vyuham'''
+        pass
+    
