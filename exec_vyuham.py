@@ -4,8 +4,8 @@ import sys
 import os
 import argparse
 
-import vyUtils.vyMarshal as Marshal
-import vyUtils.vyScout as Scout
+import vyUtils.vyMarshal.vymarshal as Marshal
+#import vyUtils.vyScout.vyscout as Scout
 
 class VyuhamExec:
     '''
@@ -24,6 +24,8 @@ class VyuhamExec:
         self.repo = {}
         self.testtype = []
         self.loadplugin = []
+        #Logger
+        #self.logger=(logger_obj)       
         
         
 #    def m_argparser(self, *m_args, **m_kwargs):
@@ -53,15 +55,20 @@ class VyuhamExec:
 
         return m_parser
 
-    def main(self, *args):
-        print "Test Marshal"
+    def execute(self, *args):
+        print 'Beginning Execution...'
+        marshal = Marshal.vyMarshal('default_suite')
+        #=======================================================================
+        # marshal.
+        # 
+        #=======================================================================
 
 if __name__ == "__main__":
     vyuham = VyuhamExec()
 #    m_args = marshal_obj.m_argparser(sys.argv)
     m_args = vyuham.m_argparser()
     if m_args:
-        vyuham.main(m_args)
+        vyuham.execute(m_args)
     else:
         print "Invalid Args"
 

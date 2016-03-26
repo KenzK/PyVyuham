@@ -1,4 +1,6 @@
 '''Marshal Files'''
+import vyLog.vylogger
+
 __author__ = 'Kenash K'
 
 class vyMarshal:
@@ -6,7 +8,8 @@ class vyMarshal:
     reports back from the scouts
     '''
     
-    def __init__(self, testsuite):
+    def __init__(self, testsuite='Marshal_Default_Suite'):
+        print 'Preparing Marshal for test execution'
         self.testsuite = testsuite
         
     def get_testcases(self):
@@ -34,4 +37,8 @@ class vyMarshal:
         '''
         pass
     
-    
+    def execute_test(self):
+        '''Start test execution
+        '''
+        print 'Starting test exec'
+        pass
